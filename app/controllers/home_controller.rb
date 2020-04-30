@@ -4,7 +4,6 @@ class HomeController < ApplicationController
   def get; end
 
   def optimize
-    binding.pry
     render 'get'
   end
 end
