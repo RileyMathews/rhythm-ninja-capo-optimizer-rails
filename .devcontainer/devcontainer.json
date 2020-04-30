@@ -1,0 +1,13 @@
+{
+  "dockerComposeFile": "../docker-compose.yml",
+  "extensions": [
+    "castwide.solargraph",
+    "eamodio.gitlens",
+    "kaiwood.endwise",
+    "noku.rails-run-spec-vscode",
+    "misogi.ruby-rubocop"
+  ],
+  "postCreateCommand": "bundle && yard gems",
+  "service": "dev",
+  "workspaceFolder": "/app"
+}
