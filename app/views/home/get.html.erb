@@ -1,0 +1,8 @@
+<h1>Home Page</h1>
+<%= form_with url: '/optimize', method: 'get' do %>
+  <% %w(A A# B C C# D D# E F F# G G#).each do |key| %>
+    <%= check_box_tag key.to_sym %>
+    <%= label_tag key.to_sym, key %>
+  <% end %>
+  <input type="submit" value="submit">
+<% end %>
