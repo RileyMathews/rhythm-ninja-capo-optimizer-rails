@@ -9,8 +9,7 @@ class HomeController < ApplicationController
     key_roots = params.permit(*PERMITTED_KEYS).select { |_k, v| v == '1' }.keys
     keys = key_roots.map { |root| Key.from_root root }
     song = Song.new(keys: keys)
-    transposition_options = CapoService.new(original_song: song).optimize
-    binding.pry
+    @transposition_options = CapoService.new(original_song: song).optimize
     render 'get'
   end
 end
