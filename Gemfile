@@ -16,6 +16,7 @@ end
 
 group :development, :test do
   gem 'pry'
+  gem 'rspec-rails'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
