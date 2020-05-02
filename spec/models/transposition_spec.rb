@@ -3,15 +3,15 @@
 require 'rails_helper'
 
 RSpec.describe Transposition do
-  describe '#new_song' do
-    it 'returns the new song with the transposition value applied' do
+  describe '#key_mappings' do
+    it 'returns a mppings of old keys to new' do
       original_keys = %w[G A].map { |v| Key.from_root v }
       song = Song.new(keys: original_keys)
 
-      actual = Transposition.new(original_song: song, steps_down: 2)
+      actual = Transposition.new(original_song: song, steps_down: 2).key_mappings
 
-      expect(actual.new_song.keys[0].root).to eq('F')
-      expect(actual.new_song.keys[1].root).to eq('G')
+      expect(actual.first[:original_key]).to eq('G')
+      expect(actual.first[:new_key]).to eq('F')
     end
   end
 end

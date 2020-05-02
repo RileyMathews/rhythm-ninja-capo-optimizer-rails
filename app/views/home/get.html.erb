@@ -11,8 +11,8 @@
   <% @transposition_options.each_with_index do |transposition, i| %>
     <h3>Option <%= i + 1 %></h3>
     <p>capo position: <%= transposition.steps_down %></p>
-    <% transposition.original_song.keys.each_with_index do |key, i| %>
-      <p>Key <%= key.root %> becomes <%= transposition.new_song.keys[i].root %></p>
+    <% transposition.key_mappings.each do |map| %>
+      <p>Key <%= map[:original_key] %> becomes <%= map[:new_key] %></p>
     <% end %>
   <% end %>
 <% end %>
