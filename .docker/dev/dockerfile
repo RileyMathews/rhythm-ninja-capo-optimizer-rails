@@ -1,4 +1,4 @@
-FROM ruby:2.6
+FROM ruby:2.6.5
 ENV LANG=en_US.UTF-8 \
     GEM_HOME=/bundle \
     BUNDLE_JOBS=4 \
