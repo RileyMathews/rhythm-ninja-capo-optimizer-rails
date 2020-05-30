@@ -1,9 +1,13 @@
 <h1>Optimize Keys</h1>
 <%= form_with url: '/optimize', method: 'get' do %>
-  <% %w(A A# B C C# D D# E F F# G G#).each do |key| %>
-    <%= check_box_tag key.to_sym %>
-    <%= label_tag key.to_sym, key %>
-  <% end %>
+  <span class="form-wrapper">
+    <% %w(A A# B C C# D D# E F F# G G#).each do |key| %>
+      <span class="check-box-wrapper">
+        <span class="check-box-label"><%= label_tag key.to_sym, key %></span>
+        <span class="check-box-field"><%= check_box_tag key.to_sym %></span>
+      </span>
+    <% end %>
+  </span>
   <input type="submit" value="Optimize!">
 <% end %>
 

@@ -7,6 +7,7 @@ ruby '2.6.5'
 
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
+gem 'webpacker'
 
 group :development do
   gem 'rubocop'

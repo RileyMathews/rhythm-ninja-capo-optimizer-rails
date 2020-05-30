@@ -1,0 +1,23 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-box-wrapper {
+  margin: 1rem 1rem;
+  display: block;
+}
+
+.check-box-field {
+
+}
+
+.check-box-label {
+
+}
