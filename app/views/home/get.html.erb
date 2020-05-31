@@ -1,14 +1,13 @@
-<h1>Optimize Keys</h1>
-<%= form_with url: '/optimize', method: 'get' do %>
-  <span class="form-wrapper">
+<%= form_with url: '/optimize', method: 'get', class: 'flex-container-column' do %>
+  <div class="flex-container-row">
     <% %w(A A# B C C# D D# E F F# G G#).each do |key| %>
-      <span class="check-box-wrapper">
-        <span class="check-box-label"><%= label_tag key.to_sym, key %></span>
-        <span class="check-box-field"><%= check_box_tag key.to_sym %></span>
-      </span>
+      <div class="check-box-group">
+        <%= label_tag key.to_sym, key %>
+        <%= check_box_tag key.to_sym %>
+      </div>
     <% end %>
-  </span>
-  <input type="submit" value="Optimize!">
+  </div>
+  <input class="button" type="submit" value="Optimize!">
 <% end %>
 
 <% if @transposition_options %>

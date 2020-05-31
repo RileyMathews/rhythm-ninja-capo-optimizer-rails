@@ -2,22 +2,39 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.form-wrapper {
+#layout-content {
+  padding: 0 3rem;
+}
+
+.flex-container-column {
   display: flex;
+  flex-direction: column;
+}
+
+.flex-container-column > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.flex-container-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
 }
 
-.check-box-wrapper {
-  margin: 1rem 1rem;
-  display: block;
+.flex-container-row > *:not(:last-child) {
+  margin-right: 2rem;
 }
 
-.check-box-field {
-
+.button {
+  padding: .5rem 0;
+  background-color: skyblue;
+  border: none;
+  border-radius: 4px;
+  font-size: large;
 }
 
-.check-box-label {
-
+.button:active {
+  background-color: slategrey;
 }
