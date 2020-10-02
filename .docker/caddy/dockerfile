@@ -1,2 +1,0 @@
-FROM caddy
-COPY ./.docker/caddy/Caddyfile /etc/caddy/Caddyfile

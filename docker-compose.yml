@@ -6,22 +6,9 @@ services:
       dockerfile: ./.docker/dev/dockerfile
     tty: true
     stdin_open: true
-    ports:
-      - "3000:3000"
     volumes: 
       - .:/app:delegated
       - bundle:/bundle
-    depends_on: 
-      - server
-
-  server:
-    build: 
-      context: .
-      dockerfile: ./.docker/caddy/dockerfile
-    ports:
-      - "443:443"
-    volumes: 
-      - ./.docker/caddy/Caddyfile:/etc/caddy/Caddyfile
 
 volumes: 
   bundle:
